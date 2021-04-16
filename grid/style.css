@@ -1,0 +1,84 @@
+* {
+  color: white;
+
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+}
+
+nav {
+  background: #40a3ff;
+  grid-area: nav;
+}
+
+main {
+  background: #64b9ffde;
+  grid-area: main;
+}
+
+#sidebar {
+  background: #1874ffde;
+  grid-area: sidebar;
+}
+
+#content1 {
+  background: #4791ffda;
+  grid-area: content1;
+}
+
+#content2 {
+  background: #4791ffda;
+  grid-area: content2;
+}
+
+#content3 {
+  background: #4791ffda;
+  grid-area: content3;
+}
+
+footer {
+  background: #40a3ff;
+  grid-area: footer;
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}

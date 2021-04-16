@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, fit-content);
+  color: white;
+  height: 150px;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  /* align-self: center; */
+}
+div :hover {
+  background-color: white;
+  color: tomato;
+}
+.one {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  background-color: #796f6f;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1/ 3;
+  background-color: yellow;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  background-color: orangered;
+}
+.four {
+  grid-column: 2;
+  grid-row: 3;
+  background-color: fuchsia;
+}
+.five {
+  grid-column: 3;
+  grid-row: 3;
+  background-color: rgb(54, 31, 255);
+}
+.six {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: green;
+}
+.seven {
+  grid-column: 3;
+  grid-row: 4;
+  background-color: rgb(255, 0, 0);
+}
+@media only screen and (max-width: 500px){
+.wrapper{display: flex;
+flex-direction: column;}
+}
